@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+[v-cloak]{
+    display: none;
+}
+
+.strikethrough {
+    text-decoration: line-through;
+    text-decoration-thickness: 3px; /* Adjust the thickness as needed */
+    text-decoration-color: red;
+  }
+  
+  

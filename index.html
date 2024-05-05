@@ -1,0 +1,41 @@
+<!-- Goals:
+1. Instantiate Vue
+2. Create input element
+3. Populate and array
+4. Render array to a list -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>vue Basics 2</title>
+  </head>
+  <body>
+    <div id="app" v-cloak>
+      <h3>Shopping List</h3>
+      <input type="text" v-model="newItem" @keyup.enter="addItem" />
+      <!-- Fix Bulma -->
+      <div class="container  is-primary is-full-width" ></div>
+      <div class="content">
+        <ul>
+          <li
+            v-for="(item, index) in items"
+            :key="index"
+            :class="{ strikethrough: item.isDone }"
+            @click="toggleStrikethrough(index)"
+          >
+            {{ item.text }}
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
